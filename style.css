@@ -1,0 +1,493 @@
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,Arial,sans-serif;color:#0f172a}body{background:#f1f5f9}.animated-bg{background:radial-gradient(circle at 10% 10%,rgba(37,99,235,.35),transparent 30%),radial-gradient(circle at 90% 90%,rgba(124,58,237,.25),transparent 30%),linear-gradient(135deg,#020617,#0f172a,#082f49);background-size:180% 180%;animation:bgMove 14s ease-in-out infinite alternate;color:#e5e7eb}.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}.hero-card{width:min(760px,100%);text-align:center;padding:55px 35px;border:1px solid rgba(255,255,255,.12);border-radius:28px;background:rgba(15,23,42,.78);backdrop-filter:blur(16px);box-shadow:0 30px 80px rgba(0,0,0,.35);animation:appear .8s ease-out}.brand{font-size:42px;font-weight:900;color:#38bdf8;letter-spacing:3px}.eyebrow{display:inline-block;color:#0ea5e9;font-size:12px;font-weight:800;letter-spacing:2px}.hero h1{font-size:clamp(30px,6vw,55px);margin:18px 0 12px}.hero p{color:#94a3b8;font-size:18px;line-height:1.6}.actions{display:flex;gap:12px;justify-content:center;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:12px 18px;border:0;border-radius:10px;text-decoration:none;font-weight:700;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:linear-gradient(135deg,#2563eb,#0891b2);color:#fff}.btn-secondary{background:#e2e8f0;color:#0f172a}.btn-ghost{background:rgba(30,41,59,.8);color:#fff;border:1px solid #334155}.app-body{background:#f1f5f9}.sidebar{position:fixed;left:0;top:0;width:250px;height:100vh;background:#0f172a;color:#fff;z-index:1000;transition:width .3s ease;overflow-x:hidden;box-shadow:4px 0 20px rgba(15,23,42,.18)}.sidebar-logo{height:78px;padding:0 18px;display:flex;align-items:center;border-bottom:1px solid rgba(255,255,255,.08);white-space:nowrap}.logo-icon{width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:linear-gradient(135deg,#2563eb,#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:900}.logo-copy{display:flex;flex-direction:column;margin-left:11px}.logo-copy strong{font-size:19px}.logo-copy small{font-size:10px;color:#94a3b8;margin-top:3px}.sidebar-menu{padding:15px 11px}.menu-link{height:46px;display:flex;align-items:center;gap:12px;padding:0 13px;margin:5px 0;color:#cbd5e1;text-decoration:none;border-radius:10px;white-space:nowrap;transition:.2s}.menu-link span{width:28px;text-align:center;font-size:18px;flex:0 0 28px}.menu-link:hover{background:#1e293b;color:#fff;transform:translateX(2px)}.menu-link.active{background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff}.menu-link.logout{color:#fca5a5}.menu-link.logout:hover{background:#7f1d1d;color:#fff}.menu-separator{height:1px;background:rgba(255,255,255,.08);margin:16px 7px}.sidebar-toggle{position:fixed;left:265px;top:17px;width:42px;height:42px;border:0;border-radius:10px;background:#2563eb;color:#fff;font-size:21px;cursor:pointer;z-index:1100;box-shadow:0 5px 15px rgba(37,99,235,.25);transition:left .3s ease}.sidebar-toggle:hover{background:#1d4ed8}.sidebar.mini{width:70px}.sidebar.mini .logo-copy,.sidebar.mini .menu-link b{display:none}.sidebar.mini .sidebar-logo{justify-content:center;padding:0}.sidebar.mini .menu-link{justify-content:center;padding:0}.sidebar.mini + .sidebar-toggle{left:85px}.main-content{margin-left:250px;min-height:100vh;width:calc(100% - 250px);transition:margin-left .3s ease,width .3s ease}.sidebar.mini ~ .main-content{margin-left:70px;width:calc(100% - 70px)}.topbar{height:70px;background:#fff;border-bottom:1px solid #e2e8f0;display:flex;align-items:center;justify-content:space-between;padding:0 30px;position:sticky;top:0;z-index:900}.user-chip{display:flex;align-items:center;gap:8px;color:#334155;font-size:14px}.user-chip span{padding:5px 9px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:11px;font-weight:700}.content{padding:30px;max-width:1450px;margin:auto}.welcome{padding:32px;border-radius:20px;background:linear-gradient(135deg,#fff,#eff6ff);border:1px solid #dbeafe;box-shadow:0 10px 30px rgba(15,23,42,.06)}.welcome h1{margin:10px 0;font-size:clamp(28px,4vw,44px)}.welcome p{color:#64748b}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:20px 0}.stat-card{padding:22px;border-radius:16px;color:#fff;box-shadow:0 10px 25px rgba(15,23,42,.08);display:grid;gap:6px}.stat-card span{font-size:23px}.stat-card strong{font-size:30px}.stat-card small{opacity:.9}.stat-card.blue{background:linear-gradient(135deg,#2563eb,#3b82f6)}.stat-card.orange{background:linear-gradient(135deg,#f59e0b,#f97316)}.stat-card.green{background:linear-gradient(135deg,#16a34a,#22c55e)}.stat-card.purple{background:linear-gradient(135deg,#7c3aed,#a855f7)}.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}.card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:22px;box-shadow:0 8px 25px rgba(15,23,42,.05);margin-bottom:18px}.card h2{margin-top:0}.card p{color:#64748b;line-height:1.6}.page-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px}.page-header h1{margin:7px 0;font-size:32px}.page-header p{margin:0;color:#64748b}.project-form{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project-form .full{grid-column:1/-1}label{display:block;font-weight:700;font-size:13px;margin-bottom:7px}input,select,textarea{width:100%;padding:12px 13px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;color:#0f172a;font:inherit;outline:none}input:focus,select:focus,textarea:focus{border-color:#2563eb;box-shadow:0 0 0 3px rgba(37,99,235,.12)}.inline-form{display:flex;gap:10px;align-items:end}.inline-form>*{flex:1}.inline-form .btn{flex:0 0 auto}.badge{display:inline-flex;align-items:center;padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}.badge.info{background:#dbeafe;color:#1d4ed8}.badge.status{background:#fef3c7;color:#92400e}.priority-basse{background:#dcfce7;color:#166534}.priority-moyenne{background:#fef3c7;color:#92400e}.priority-haute{background:#fee2e2;color:#991b1b}.priority-urgente{background:#fecaca;color:#7f1d1d}.table-wrap{overflow-x:auto}.table-wrap table{width:100%;border-collapse:collapse}.table-wrap th,.table-wrap td{padding:13px;border-bottom:1px solid #e2e8f0;text-align:left}.table-wrap th{background:#0f172a;color:#fff}.table-wrap tr:hover td{background:#f8fafc}.alert{padding:13px 15px;border-radius:10px;margin-bottom:18px}.alert.success{background:#dcfce7;color:#166534}.alert.error{background:#fee2e2;color:#991b1b}.empty{color:#64748b;text-align:center}.hint{font-size:12px;color:#64748b;margin-top:6px}.comment small{display:block;color:#94a3b8;margin-top:4px}.profile{max-width:650px}@keyframes bgMove{from{background-position:0 0}to{background-position:100% 100%}}@keyframes appear{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}@media(max-width:900px){.stats-grid{grid-template-columns:repeat(2,1fr)}.project-form{grid-template-columns:1fr 1fr}}@media(max-width:700px){.sidebar{width:250px;transform:translateX(-100%)}.sidebar.mobile-open{transform:translateX(0)}.sidebar-toggle{left:15px}.sidebar.mobile-open + .sidebar-toggle{left:265px}.main-content,.sidebar.mini ~ .main-content{margin-left:0;width:100%}.topbar{padding:0 15px}.content{padding:20px 15px}.stats-grid{grid-template-columns:1fr 1fr}.project-form{grid-template-columns:1fr}.project-form .full{grid-column:auto}.inline-form{flex-direction:column;align-items:stretch}.page-header{align-items:flex-start;flex-direction:column;gap:12px}}@media(max-width:450px){.stats-grid{grid-template-columns:1fr}.user-chip span{display:none}.topbar{height:62px}}
+
+/* ================================
+   ANIMATIONS GESPRO
+================================ */
+
+/* Apparition générale */
+.content {
+    animation: pageEnter .6s ease-out both;
+}
+
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation du bloc bienvenue */
+.welcome {
+    animation: welcomeEnter .7s ease-out both;
+}
+
+@keyframes welcomeEnter {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Animation des statistiques */
+.stat-card {
+    animation: statEnter .6s ease-out both;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.stat-card:nth-child(1) {
+    animation-delay: .10s;
+}
+
+.stat-card:nth-child(2) {
+    animation-delay: .20s;
+}
+
+.stat-card:nth-child(3) {
+    animation-delay: .30s;
+}
+
+.stat-card:nth-child(4) {
+    animation-delay: .40s;
+}
+
+@keyframes statEnter {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Effet au survol des statistiques */
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(15, 23, 42, .15);
+}
+
+/* Animation des cartes */
+.card {
+    animation: cardEnter .7s ease-out both;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.card:nth-child(1) {
+    animation-delay: .20s;
+}
+
+.card:nth-child(2) {
+    animation-delay: .30s;
+}
+
+.card:nth-child(3) {
+    animation-delay: .40s;
+}
+
+@keyframes cardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, .10);
+    border-color: #bfdbfe;
+}
+
+/* Animation des liens de la sidebar */
+.menu-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 3px;
+    height: 0;
+    background: #38bdf8;
+    border-radius: 0 5px 5px 0;
+    transition: height .25s ease, top .25s ease;
+}
+
+.menu-link:hover::before,
+.menu-link.active::before {
+    height: 70%;
+    top: 15%;
+}
+
+/* Animation du bouton toggle */
+.sidebar-toggle {
+    transition:
+        left .3s ease,
+        transform .25s ease,
+        background .25s ease;
+}
+
+.sidebar-toggle:hover {
+    transform: scale(1.08);
+}
+
+.sidebar-toggle:active {
+    transform: scale(.92);
+}
+
+/* Animation du logo */
+.logo-icon {
+    transition: transform .4s ease;
+}
+
+.logo-icon:hover {
+    transform: rotate(-8deg) scale(1.08);
+}
+
+/* Animation des boutons */
+.btn {
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        filter .2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+.btn:active {
+    transform: translateY(0) scale(.98);
+}
+
+/* Animation des champs */
+input,
+select,
+textarea {
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        transform .2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    transform: translateY(-1px);
+}
+
+/* Animation des tableaux */
+.table-wrap tbody tr {
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+.table-wrap tbody tr:hover {
+    transform: translateX(3px);
+}
+
+/* Badge animé */
+.badge.status {
+    animation: statusPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .65;
+    }
+}
+
+/* Fond animé discret */
+.animated-bg {
+    background-size: 180% 180%;
+    animation: backgroundMove 14s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 50% 50%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Animation du texte de bienvenue */
+.welcome h1 {
+    animation: titleAppear .8s ease-out .15s both;
+}
+
+.welcome p {
+    animation: titleAppear .8s ease-out .25s both;
+}
+
+@keyframes titleAppear {
+    from {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ================================
+   ACCESSIBILITÉ
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+
+
+
+
+
+/* =========================================
+   GESPRO - TACHES
+========================================= */
+
+.task-create-card {
+    margin-bottom: 20px;
+}
+
+.task-create-card h2 {
+    margin-top: 0;
+}
+
+.task-toolbar {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task-toolbar select {
+    width: 190px;
+}
+
+.task-search {
+    position: relative;
+    flex: 1;
+}
+
+.task-search span {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.task-search input {
+    padding-left: 42px;
+}
+
+
+/* LISTE */
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    background: #fff;
+    transition: .25s ease;
+    animation: taskAppear .4s ease both;
+}
+
+.task-item:hover {
+    transform: translateY(-3px);
+    border-color: #bfdbfe;
+    box-shadow: 0 10px 25px rgba(15,23,42,.08);
+}
+
+@keyframes taskAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.task-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    min-width: 0;
+    flex: 1;
+}
+
+.task-icon {
+    width: 45px;
+    height: 45px;
+    flex: 0 0 45px;
+    border-radius: 12px;
+    background: #dbeafe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.task-content {
+    min-width: 0;
+}
+
+.task-content h3 {
+    margin: 0 0 5px;
+    color: #0f172a;
+}
+
+.task-content p {
+    margin: 0 0 10px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.task-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.task-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-right form {
+    margin: 0;
+}
+
+.task-right select {
+    width: 125px;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.btn-delete {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #fee2e2;
+    color: #b91c1c;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.btn-delete:hover {
+    background: #fecaca;
+    transform: scale(1.08);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .task-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .task-toolbar select {
+        width: 100%;
+    }
+
+    .task-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task-right {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .task-main {
+        width: 100%;
+    }
+
+    .task-right {
+        flex-wrap: wrap;
+    }
+
+    .task-content h3 {
+        font-size: 16px;
+    }
+
+    .task-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+}
